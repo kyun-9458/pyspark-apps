@@ -6,7 +6,7 @@ spark = SparkSession \
     .appName('Test_pyspark') \
     .getOrCreate()
 
-schema = 'NAME STRING, REGION STRING, AGE INT, GF BOOLEAN'
+schema = 'NAME STRING, AGE INT, GF BOOLEAN'
 fr = spark.createDataFrame(data=[('KK', 29, True), ('JS', 29, False), ('MJ', 30, False), ('JM', 29, False), ('TwoWeeks Dragon', 29, True)], schema = schema)
 fr.show()
 
